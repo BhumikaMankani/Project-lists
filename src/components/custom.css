@@ -1,0 +1,218 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    transition: opacity 500ms;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.close_button {
+    width: 100%;
+    max-width: 40px;
+    height: 40px;
+    padding: 5px;
+    background: transparent;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+}
+
+.modal-content {
+    width: 100%;
+    position: relative;
+    max-width: 700px;
+    margin: 20px;
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-out;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-title {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* Professional Input Styles */
+.modal-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    letter-spacing: 0.01em;
+}
+
+.modal-input,
+.modal-select,
+.modal-textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #111827;
+    background-color: #f9fafb;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+    /* Important for width: 100% */
+}
+
+.modal-input:focus,
+.modal-select:focus,
+.modal-textarea:focus {
+    outline: none;
+    background-color: #ffffff;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.modal-input::placeholder,
+.modal-textarea::placeholder {
+    color: #9ca3af;
+}
+
+.modal-input.error,
+.modal-select.error,
+.modal-textarea.error {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+}
+
+.modal-input.error:focus,
+.modal-select.error:focus,
+.modal-textarea.error:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+.error-text {
+    font-size: 0.75rem;
+    color: #dc2626;
+    margin-top: 6px;
+}
+
+/* Button Styles */
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 6px 8px rgba(37, 99, 235, 0.3);
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #4b5563;
+    border: 1px solid #d1d5db;
+}
+
+.btn-secondary:hover {
+    background-color: #f3f4f6;
+    border-color: #9ca3af;
+}
+
+/* --- New Modal Styles for Scroll and Sections --- */
+
+.modal-scroll-form {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 12px;
+    margin-right: -12px;
+}
+
+.modal-section-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #6b7280;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f3f4f6;
+    margin-top: 28px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.modal-section-title:first-of-type {
+    margin-top: 0;
+}
+
+/* Custom scrollbar for better look */
+.modal-scroll-form::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-scroll-form::-webkit-scrollbar-track {
+    background: #f9fafb;
+    border-radius: 10px;
+}
+
+.modal-scroll-form::-webkit-scrollbar-thumb {
+    background: #e5e7eb;
+    border-radius: 10px;
+}
+
+.modal-scroll-form::-webkit-scrollbar-thumb:hover {
+    background: #d1d5db;
+}

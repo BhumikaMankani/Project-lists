@@ -1,0 +1,219 @@
+/* Table Container - Allows horizontal scroll */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    background-color: #ffffff;
+    scrollbar-width: thin;
+    border: 1px solid #e5e7eb;
+}
+
+/* Base Table Styles */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.875rem;
+    /* 14px */
+    color: #374151;
+    min-width: max-content;
+    /* Forces table to grow effectively for scroll */
+}
+
+/* Header Styles */
+.custom-table thead th {
+    background-color: #f9fafb;
+    color: #111827;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    /* 12px */
+    letter-spacing: 0.05em;
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+/* Body Cell Styles */
+.custom-table tbody td {
+    padding: 12px 16px;
+}
+
+/* Zebra Striping */
+.custom-table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.custom-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Hover Effect */
+.custom-table tbody tr:hover {
+    background-color: #f3f4f6;
+    transition: background-color 0.15s ease-in-out;
+}
+
+/* Last child border removal */
+.custom-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* --- Specific Data Styles --- */
+
+/* Category Cell */
+.category-cell {
+    padding: 8px 12px;
+    font-weight: 500;
+    color: #111827;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.category-shopify {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.category-custlo {
+    background-color: #fbd3b6;
+    color: #1f2937;
+}
+
+.category-troubleshoot {
+    background-color: #bbf7d0;
+    color: #14532d;
+}
+
+.category-redesign {
+    background-color: #fecaca;
+    color: #991b1b;
+}
+
+/* Team Lead Link/Text */
+.team-lead-text {
+    color: #6b21a8;
+    font-weight: 500;
+}
+
+/* Status Text Styles */
+.status-text {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-not-started {
+    color: #fdba74;
+    text-transform: none;
+}
+
+.status-on-track {
+    color: #059669;
+}
+
+.status-offtrack {
+    color: #dc2626;
+    text-transform: none;
+}
+
+.status-forwarded {
+    color: #4b5563;
+    text-transform: none;
+}
+
+/* Discussion Text */
+.discussion-text {
+    color: #656565;
+}
+
+.discussion-whatsapp {
+    color: #84cc16;
+}
+
+/* Date Styles */
+.date-highlight-red {
+    background-color: #ef4444;
+    color: white;
+    padding: 4px 8px;
+    display: inline-block;
+}
+
+/* --- New Image Styles --- */
+
+/* Project Column */
+.project-text {
+    font-weight: 500;
+    color: #374151;
+}
+
+/* Daily Check */
+.daily-check-cell {
+    background-color: #bbf7d0;
+    /* Pale green bg */
+    color: #f87171;
+    /* Pinkish text for "No" */
+    font-weight: 600;
+    padding: 12px 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Ensure cell fills height if possible */
+.custom-table td.daily-check-td {
+    padding: 0;
+}
+
+/* Overdue Days */
+.overdue-block {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    color: white;
+    font-weight: 700;
+}
+
+.overdue-red {
+    background-color: #ff0000;
+}
+
+.deadline-green {
+    background-color: #a7f3d0;
+    color: #065f46;
+    font-weight: 500;
+}
+
+button.add-more-button {
+    margin-top: 20px;
+}
+
+/* Groups */
+.group-block {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    font-weight: 500;
+}
+
+/* .group-c {
+    background-color: #78350f;
+}
+
+.group-d {
+    background-color: #581c87;
+}
+
+.group-b {
+    background-color: #d9f99d;
+    color: #365314;
+}
+
+.group-a {
+    background-color: #ffedd5;
+    color: #9a3412;
+} */
