@@ -529,7 +529,8 @@ function TableColumns() {
     // Data is now managed in state initialized from JSON
 
     return (
-        <>
+        <div className='project-list'>
+            <h1>Projects List</h1>
             <Table columns={columns} data={data} />
             <button className="add-more-button" onClick={() => setIsModalOpen(true)}>Add more</button>
 
@@ -538,7 +539,7 @@ function TableColumns() {
                 onClose={() => setIsModalOpen(false)}
                 onSave={handleSaveEntry}
             />
-        </>
+        </div>
     );
 }
 
